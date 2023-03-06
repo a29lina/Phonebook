@@ -1,5 +1,5 @@
 def get_data():
-    with open('hw/phone.txt', 'r', encoding='utf-8') as file:
+    with open('Phonebook/phone.txt', 'r', encoding='utf-8') as file:
         data = file.readlines()
     return (data)
 
@@ -21,7 +21,7 @@ def add_data(data):
 
 
 def write_data(data):
-    file = open('hw/phone.txt', 'w', encoding='utf-8')
+    file = open('Phonebook/phone.txt', 'w', encoding='utf-8')
     # data = str(data)
     file.writelines(data)
 
@@ -39,14 +39,14 @@ def find_contact():
 
 
 def change_contact():
-    with open('hw/phone.txt', 'r', encoding='utf-8') as f:
+    with open('Phonebook/phone.txt', 'r', encoding='utf-8') as f:
         old_data = f.read()
     print('Введите, что заменить (полное ФИО или номер): ')
     old_info = input()
     print('Введите, на что заменить: ')
     new_info = input()
     new_data = old_data.replace(old_info, new_info)
-    with open('hw/phone.txt', 'w', encoding='utf-8') as file:
+    with open('Phonebook/phone.txt', 'w', encoding='utf-8') as file:
         file.writelines(new_data)
 
 

@@ -79,6 +79,5 @@ def menu():
     if a == 0:
         quit()
 
-
 text = get_data()
 menu()
